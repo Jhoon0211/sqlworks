@@ -25,3 +25,62 @@ INSERT INTO orders VALUES (9, 2, 10, 7000, TO_DATE('2018-07-09', 'YYYY-MM-DD'));
 INSERT INTO orders VALUES (10, 3, 8, 13000, TO_DATE('2018-07-10', 'YYYY-MM-DD'));
 
 SELECT * FROM orders;
+
+UPDATE orders
+SET saleprice = '12000'
+WHERE orderid = 6;
+
+-- 고객이 주문한 도서의 총 판매액을 구하시오
+SELECT SUM(saleprice) 총판매액, AVG(saleprice) 평균금액
+FROM orders;
+
+COMMIT;
+
+-- 서점의 도서 판매 건수를 구하시오
+SELECT COUNT(*) 총판매건수
+FROM orders;
+
+-- 2번 고객의 주문 내역을 검색하시오
+SELECT * 
+FROM orders
+WHERE custid = 2;
+
+-- 2번 고객(김연아)이 주문한 도서의 총 판매액을 구하시오
+SELECT SUM(saleprice) 총매출
+FROM orders
+WHERE custid = 2;
+
+-- 가격이 8000원 이상인 도서를 구매한 고객별 주문도서의 총 수량을 구하시오
+SELECT COUNT(*) 총수량
+FROM orders
+WHERE saleprice >= 8000
+GROUP BY custid;
+
+-- 가격이 8000원 이상인 도서를 구매한 고객별 주문도서의 총 수량을 구하시오
+-- 단, 2권 이상 구매한 고객만 찾으시오
+SELECT custid COUNT(*) 총수량
+FROM orders
+WHERE saleprice >= 8000
+GROUP BY custid
+HAVING COUNT(*) >= 2;
+
+-- ROWNUMBER
+
+-- JOIN (1개 테이블 이상 연결하는 기법)
+SELECT ord.*, cus.*
+FROM orders ord, customer cus
+WHERE ord.custid = cus.custid;
+
+SELECT cus.name, ord.saleprice, ord.orderdate
+FROM orders ord, customer cus
+WHERE ord.custid = cus.custid
+AND cus.name = '김연아';
+
+-- 고객별('김연아')로 주문한 도서의 총 판매액을 구하시오
+-- 집계를 구할때는 GROUP BY절 사용, 조건은 HAVING절 사용
+SELECT cus.name, SUM(ord.saleprice)
+FROM orders ord, customer cus
+WHERE ord.custid = cus.custid
+GROUP BY cus.name
+HAVING cus.name = '김연아';
+
