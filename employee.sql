@@ -21,9 +21,20 @@ CREATE TABLE employee(
 INSERT INTO employee VALUES (100, '이강', 2500000, SYSDATE, '남자', '1000');
 INSERT INTO employee VALUES (101, '이산', 2000000, SYSDATE, '여자', '1001');
 INSERT INTO employee VALUES (102, '박달', 1500000, SYSDATE, '남자', '1002');
-INSERT INTO employee VALUES (103, '강하늘', 1500000, SYSDATE, '', '1003');
+INSERT INTO employee VALUES (103, '강하늘', 3500000, SYSDATE, '', '1003');
 INSERT INTO employee VALUES (104, '양우주', 4500000, SYSDATE, '남자', '1000');
 INSERT INTO employee VALUES (105, '강남', 2600000, SYSDATE, '남자', '1000');
+INSERT INTO employee VALUES (106, '이go', 2500000, SYSDATE, '남자', '1000');
+
+
+
+UPDATE employee
+SET sal = '3500000'
+WHERE empno = 103;
+
+UPDATE employee
+SET ename = '이해'
+WHERE empno = 106;
 
 -- 성별이 남자이면서 급여가 250만원 이상인 사원을 검색하시오
 SELECT *

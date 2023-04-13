@@ -1,0 +1,36 @@
+오라클 자료형
+
+한글 - 3byte, 영어 - 1byte
+
+<char vs varchar>
+char(10) - 고정길이  'abc' - 10byte 사용
+varchar2(10) - 가변길이 (더 많이 씀) - 'abc' - 3byte = 더 효율적임
+
+<date vs timestamp>
+date - 날짜(연월일)
+timestamp - 날짜, 시간 (더 많이 씀)
+
+number(3)
+
+PRIMARY - 관계맺을것 아니면 주로 사용 X
+INSERT INTO ~ VALUES - 데이터 입력
+SELECT * FROM 테이블명 - 테이블 전체 
+SELECT ~ LENGTH ~ FROM - 자료의 바이트 크기 검색
+
+WHERE ~ IN - or 조건
+WHERE ~ OR - or 조건
+
+BETWEEN AND - 사이 조건 (이상 이하)
+WHERE AND - 사이 조건 (이상 이하)
+
+LIKE - 특정 자료 검색
+%% - 특정 문자 검색
+
+
+<JOIN하기 - 1개 테이블(sql) 이상 연결>
+pt.1 ) FOREIGN KEY - 설정에 사용되었던 것이 연결을 가능케 함
+pt.2 )
+
+SELECT orders.*, customer.*
+FROM orders, customer
+WHERE orders.custid = customer.custid;
