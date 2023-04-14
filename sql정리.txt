@@ -1,0 +1,57 @@
+prev() :  이전 요소
+next() :  다음(아래) 요소 선택
+sibiling() : 형제요소
+
+parent() : $('p')의 부모요소
+children() : $('p')의 자식요소
+
+append() - $('div').append('<p>') : div에 p를 마지막 자식요소로 삽입(아래)
+prepend() - $('div').prepend('<p>') : div에 p를 마지막 첫번째 요소로 삽입
+
+
+keydown()
+keyup()
+addClass()
+textarea
+
+RANK() ~ OVER : 순위 매기는 함수
+
+조인 & 서브쿼리 (중첩쿼리)
+
+인라인 뷰 : FROM절 삽입
+
+ * VIEW 생성
+- CREATE VIEW
+- AS SELECT 
+
+ * VIEW 검색
+- SELECT * FROM vw_Customer;
+
+ * VIEW 삭제
+DROP VIEW vw_Customer;
+
+ * 조인 방식은 프로그램마다 다름 (스탠다드 조인)
+- STANDARD JOIN (FROM 절에 INNER JOIN ~ ON : 동등 조인)
+- OUTER JOIN (조건에 충족되지 않는 데이터도 함께 표출되는 방식 / LEFT OUTER JOIN, RIGHT OUTER JOIN)
+
+ * 외래키 제약조건 삭제
+- ALTER TABLE employee DROP CONSTRAINT emp_fk;
+
+ * 제약 조건 추가
+ALTER TABLE employee ADD CONSTRAINT emp_fk
+FOREIGN KEY(deptno) REFERENCES dept(deptno)
+ON DELETE CASCADE;
+
+ * SHOW USER;
+USER명 확인
+
+
+ * 테이블 변경
+UPDATE 	 테이블이름
+SET	 변경칼럼 = 변경값
+WHERE 	 절
+
+
+
+
+
