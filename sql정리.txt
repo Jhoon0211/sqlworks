@@ -52,6 +52,13 @@ SET	 변경칼럼 = 변경값
 WHERE 	 절
 
 
+ * DB 모델링 툴
+- Lucid Chart
+ ID : Jaehoon
+ PW : Dkswogns12!
+
+- EX ERD : 자바 이클립스 연동
+- ER win : 유료, 쉐어웨어
 
 
 

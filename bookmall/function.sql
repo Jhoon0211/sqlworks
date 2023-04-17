@@ -136,6 +136,15 @@ SELECT TO_CHAR(SYSDATE, 'YY-MM-DD') 날짜,
        TO_CHAR(SYSDATE, 'DD') 일
 FROM DUAL;
 
+-- 4월 1일에서 10일 후
+SELECT TO_DATE ('2023/4/1') + 20 FROM DUAL;
+
+-- 입사일 : 2022-1-1 퇴사일 : 2023-1-31 (월의 수 계산)
+SELECT
+    ROUND(MONTHS_BETWEEN(TO_DATE('2023/1/31'), TO_DATE('2022-1-1')), 0) 총개월수
+FROM DUAL;
+
+
 -- 시간 형식 변환
 SELECT TO_CHAR(SYSDATE, 'HH-MI:SS PM') 시간형식,
        TO_CHAR(SYSDATE, 'YYYY/MM/DD HH:MI:SS PM') 날짜와시간
