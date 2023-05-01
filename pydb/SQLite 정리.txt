@@ -1,0 +1,14 @@
+DDL - CREATE, ALTER, DROP
+DML
+DCL
+TCL
+
+SQLITE3
+문자 - TEXT
+숫자 - INTEGER
+날짜 - TIMESTAMP
+
+ORACLE
+문자 - varchar2()
+숫자 - NUMBER
+날짜 - DATE, TIMESTAMP
