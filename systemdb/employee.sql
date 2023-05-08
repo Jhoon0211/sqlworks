@@ -24,7 +24,7 @@ INSERT INTO employee VALUES (102, '박달', 1500000, SYSDATE, '남자', '1002');
 INSERT INTO employee VALUES (103, '강하늘', 3500000, SYSDATE, '', '1003');
 INSERT INTO employee VALUES (104, '양우주', 4500000, SYSDATE, '남자', '1000');
 INSERT INTO employee VALUES (105, '강남', 2600000, SYSDATE, '남자', '1000');
-INSERT INTO employee VALUES (106, '이go', 2500000, SYSDATE, '남자', '1000');
+INSERT INTO employee VALUES (106, '이해', 2500000, SYSDATE, '남자', '1000');
 
 
 
@@ -82,4 +82,5 @@ HAVING AVG(sal) >= 3000000
 -- 정렬
 ORDER BY AVG(sal) DESC;
 
+DELETE FROM employee WHERE empno = 106;
 
