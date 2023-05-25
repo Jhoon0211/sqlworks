@@ -103,4 +103,6 @@ SELECT *
 FROM book
 ORDER BY price DESC, publisher ASC;
 
+DROP TABLE book;
+
 
