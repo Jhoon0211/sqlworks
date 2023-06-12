@@ -9,6 +9,9 @@ CREATE TABLE person(
 INSERT INTO person(userid, userpw, name, age)
 VALUES ('cloud', 'cloud123', '구름이', 120);
 
+INSERT INTO person(userid, userpw, name, age)
+VALUES ('today', 'today123', '투데이', 5);
+
 SELECT * FROM person;
 
 COMMIT;
