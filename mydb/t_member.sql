@@ -27,9 +27,10 @@ INSERT INTO t_member(memberid, passwd, name, gender)
 VALUES ('cloud', 'm12345', '안재훈', '남');
 
 INSERT INTO t_board (bnum, title, content, memberid)
-VALUES (b_seq.NEXTVAL,'가입인사', '안녕하세요. 반갑습니다.', 'cloud');
+VALUES (b_seq.NEXTVAL, '가입인사', '안녕하세요. 반갑습니다.', 'cloud');
 
 
 SELECT * FROM t_member;
+SELECT * FROM t_board;
 
 DROP TABLE t_member;
