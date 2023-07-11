@@ -59,6 +59,12 @@ SELECT *
 FROM (SELECT ROWNUM RN, t_board.* 
 FROM t_board)
 WHERE RN >= 1 AND RN <= 10; -- 별칭(RN)을 사용해야 한다.
+
+-- 페이지 처리2(인라인뷰 - 중첩쿼리(서브쿼리))
+SELECT *
+FROM (SELECT ROWNUM rn, board.* 
+            FROM(SELECT * FROM t_board ORDER BY bnums DESC) board)
+WHERE rn >= 1 AND RN <= 10; -- 별칭(RN)을 사용해야 한다.
 -- ORDER BY bnum;
 
 -- 총 행의 수
